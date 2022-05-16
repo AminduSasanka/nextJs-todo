@@ -22,13 +22,13 @@ export async function getStaticProps(context) {
         isConnected: true,
         fetchedData: data_processed,
       },
-      revalidate: 10,
+      revalidate: 1,
     };
   } catch (error) {
     console.log(error);
     return {
       props: { isConnected: false },
-      revalidate: 10,
+      revalidate: 1,
     };
   }
 }
